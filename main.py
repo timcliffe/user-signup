@@ -17,9 +17,9 @@ def sign_up():
 
     if username == "" or " " or len(username) < 3 or len(username) > 20:
         username_error = "invalid username"
-    if password = "" or " " or len(password) < 3 or len(password) > 20:
+    if password == "" or " " or len(password) < 3 or len(password) > 20:
         password_error = "invalid password"
-    if verify = "" or verify != password:
+    if verify == "" or verify != password:
         verify_error = "invalid verification"
     if email != "":
         if "@" not in email or "." not in email or " " in email or len(email) < 3 or len(email) > 20:
