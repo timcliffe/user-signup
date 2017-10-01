@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template
+from Flask import flask, request, render_template
 from cgi import escape
 
 app = Flask (__name__)
