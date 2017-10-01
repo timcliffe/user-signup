@@ -1,4 +1,5 @@
 from flask import Flask, request, render_template
+from cgi import escape
 
 app = Flask (__name__)
 app.config['DEBUG'] = True
@@ -9,6 +10,11 @@ def sign_up():
     password = request.form['password']
     verify = request.form['verify']
     email = request.form['email']
+
+    username = escape(username)
+    password = escape(password)
+    verify = escape(verify)
+    email = escape(email)
 
     username_error = ""
     password_error = ""
